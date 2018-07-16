@@ -111,6 +111,7 @@ class ImageNetDownloader:
              download_file = self.download_file(download_url, self.mkWnidDir(wnid), wnid + '_original_images.tar')
         except Exception, erro:
             print 'Fail to download : ' + download_url
+            return
 
         currentDir = os.getcwd()
         extracted_folder = os.path.join(wnid, wnid + '_original_images')
